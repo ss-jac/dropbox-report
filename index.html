@@ -32,19 +32,19 @@
 <body>
     <div class="container">
         <h1>Dropbox Folder File Count Report</h1>
-        <div class="meta-info"><span><strong>Generated:</strong> 2026-06-05 11:56:41 UTC</span></div>
+        <div class="meta-info"><span><strong>Generated:</strong> 2026-06-06 10:50:07 UTC</span></div>
         
         <div class="chart-container">
             <h2 class="chart-title">14-Day Progress</h2>
             <canvas id="progressChart"></canvas>
         </div>
         <div class="stats">
-            <div class="stat-box"><div class="label">Total Folders</div><div class="value">12</div></div>
-            <div class="stat-box"><div class="label">Total Files</div><div class="value">27,411</div></div>
+            <div class="stat-box"><div class="label">Total Folders</div><div class="value">13</div></div>
+            <div class="stat-box"><div class="label">Total Files</div><div class="value">31,723</div></div>
             
             <div class="stat-box change-box">
                 <div class="label">Change from Yesterday</div>
-                <div class="value" style="color: #666;"><span style="font-size: 18px;">&#x2192;</span> No change</div>
+                <div class="value" style="color: #dc3545;"><span style="font-size: 18px;">&#x2191;</span> 4,312 files</div>
             </div>
         </div>
         <div class="search-box"><input type="text" id="search-input" placeholder="Search folders..."></div>
@@ -59,10 +59,10 @@
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ["2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-30", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05"],
+                    labels: ["2026-05-23", "2026-05-24", "2026-05-25", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-30", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-06"],
                     datasets: [{
                         label: 'Total Files',
-                        data: [27675, 27675, 27675, 27675, 25321, 25321, 23598, 27411, 27411, 27411, 27411, 27411, 27411, 27411],
+                        data: [27675, 27675, 27675, 25321, 25321, 23598, 27411, 27411, 27411, 27411, 27411, 27411, 27411, 31723],
                         borderColor: '#0061fe',
                         backgroundColor: 'rgba(0, 97, 254, 0.1)',
                         borderWidth: 2,
@@ -97,7 +97,7 @@
             });
         </script>
     <script>
-        const tableData = [{"path": "/", "file_count": 0}, {"path": "/batch 385", "file_count": 2380}, {"path": "/batch 386", "file_count": 1795}, {"path": "/batch 387", "file_count": 2953}, {"path": "/batch 388", "file_count": 1952}, {"path": "/batch 389", "file_count": 1595}, {"path": "/batch 390", "file_count": 2060}, {"path": "/batch 391", "file_count": 1937}, {"path": "/batch 392", "file_count": 3708}, {"path": "/batch 393", "file_count": 2395}, {"path": "/batch 394", "file_count": 2823}, {"path": "/batch 395", "file_count": 3813}];
+        const tableData = [{"path": "/", "file_count": 0}, {"path": "/batch 385", "file_count": 2380}, {"path": "/batch 386", "file_count": 1795}, {"path": "/batch 387", "file_count": 2953}, {"path": "/batch 388", "file_count": 1952}, {"path": "/batch 389", "file_count": 1595}, {"path": "/batch 390", "file_count": 2060}, {"path": "/batch 391", "file_count": 1937}, {"path": "/batch 392", "file_count": 3708}, {"path": "/batch 393", "file_count": 2395}, {"path": "/batch 394", "file_count": 2823}, {"path": "/batch 395", "file_count": 3813}, {"path": "/batch 396", "file_count": 4312}];
         const table = new Tabulator("#folder-table", {
             data: tableData, layout: "fitColumns", pagination: "local", paginationSize: 50,
             paginationSizeSelector: [25, 50, 100, 250, true],
