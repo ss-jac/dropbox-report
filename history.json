@@ -1,11 +1,6 @@
 {
   "data": [
     {
-      "date": "2026-06-30",
-      "total_files": 44998,
-      "total_folders": 16
-    },
-    {
       "date": "2026-07-01",
       "total_files": 44998,
       "total_folders": 16
@@ -72,6 +67,11 @@
     },
     {
       "date": "2026-07-14",
+      "total_files": 52235,
+      "total_folders": 18
+    },
+    {
+      "date": "2026-07-15",
       "total_files": 52235,
       "total_folders": 18
     }
