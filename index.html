@@ -32,19 +32,19 @@
 <body>
     <div class="container">
         <h1>Dropbox Folder File Count Report</h1>
-        <div class="meta-info"><span><strong>Generated:</strong> 2026-09-17 14:00:25 UTC</span></div>
+        <div class="meta-info"><span><strong>Generated:</strong> 2026-09-18 13:17:31 UTC</span></div>
         
         <div class="chart-container">
             <h2 class="chart-title">14-Day Progress</h2>
             <canvas id="progressChart"></canvas>
         </div>
         <div class="stats">
-            <div class="stat-box"><div class="label">Total Folders</div><div class="value">15</div></div>
-            <div class="stat-box"><div class="label">Total Files</div><div class="value">40,921</div></div>
+            <div class="stat-box"><div class="label">Total Folders</div><div class="value">16</div></div>
+            <div class="stat-box"><div class="label">Total Files</div><div class="value">43,087</div></div>
             
             <div class="stat-box change-box">
                 <div class="label">Change from Yesterday</div>
-                <div class="value" style="color: #28a745;"><span style="font-size: 18px;">&#x2193;</span> 4,312 files</div>
+                <div class="value" style="color: #dc3545;"><span style="font-size: 18px;">&#x2191;</span> 2,166 files</div>
             </div>
         </div>
         <div class="search-box"><input type="text" id="search-input" placeholder="Search folders..."></div>
@@ -59,10 +59,10 @@
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ["2026-09-03", "2026-09-04", "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17"],
+                    labels: ["2026-09-04", "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18"],
                     datasets: [{
                         label: 'Total Files',
-                        data: [49728, 52431, 52431, 52431, 52431, 52431, 50036, 50036, 49046, 49046, 45233, 45233, 45233, 45233, 40921],
+                        data: [52431, 52431, 52431, 52431, 52431, 50036, 50036, 49046, 49046, 45233, 45233, 45233, 45233, 40921, 43087],
                         borderColor: '#0061fe',
                         backgroundColor: 'rgba(0, 97, 254, 0.1)',
                         borderWidth: 2,
@@ -97,7 +97,7 @@
             });
         </script>
     <script>
-        const tableData = [{"path": "/", "file_count": 0}, {"path": "/batch 397", "file_count": 4692}, {"path": "/batch 398", "file_count": 4971}, {"path": "/batch 399", "file_count": 3612}, {"path": "/batch 400", "file_count": 3028}, {"path": "/batch 401", "file_count": 4209}, {"path": "/batch 402", "file_count": 2974}, {"path": "/batch 403", "file_count": 3254}, {"path": "/batch 404", "file_count": 1637}, {"path": "/batch 405", "file_count": 817}, {"path": "/batch 406", "file_count": 2169}, {"path": "/batch 407", "file_count": 2333}, {"path": "/batch 408", "file_count": 2689}, {"path": "/batch 409", "file_count": 2703}, {"path": "/batch 410", "file_count": 1833}];
+        const tableData = [{"path": "/", "file_count": 0}, {"path": "/batch 397", "file_count": 4692}, {"path": "/batch 398", "file_count": 4971}, {"path": "/batch 399", "file_count": 3612}, {"path": "/batch 400", "file_count": 3028}, {"path": "/batch 401", "file_count": 4209}, {"path": "/batch 402", "file_count": 2974}, {"path": "/batch 403", "file_count": 3254}, {"path": "/batch 404", "file_count": 1637}, {"path": "/batch 405", "file_count": 817}, {"path": "/batch 406", "file_count": 2169}, {"path": "/batch 407", "file_count": 2333}, {"path": "/batch 408", "file_count": 2689}, {"path": "/batch 409", "file_count": 2703}, {"path": "/batch 410", "file_count": 1833}, {"path": "/batch 411", "file_count": 2166}];
         const table = new Tabulator("#folder-table", {
             data: tableData, layout: "fitColumns", pagination: "local", paginationSize: 50,
             paginationSizeSelector: [25, 50, 100, 250, true],
