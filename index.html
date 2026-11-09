@@ -32,19 +32,19 @@
 <body>
     <div class="container">
         <h1>Dropbox Folder File Count Report</h1>
-        <div class="meta-info"><span><strong>Generated:</strong> 2026-11-08 15:41:02 UTC</span></div>
+        <div class="meta-info"><span><strong>Generated:</strong> 2026-11-09 19:22:38 UTC</span></div>
         
         <div class="chart-container">
             <h2 class="chart-title">14-Day Progress</h2>
             <canvas id="progressChart"></canvas>
         </div>
         <div class="stats">
-            <div class="stat-box"><div class="label">Total Folders</div><div class="value">8</div></div>
-            <div class="stat-box"><div class="label">Total Files</div><div class="value">10,029</div></div>
+            <div class="stat-box"><div class="label">Total Folders</div><div class="value">7</div></div>
+            <div class="stat-box"><div class="label">Total Files</div><div class="value">8,265</div></div>
             
             <div class="stat-box change-box">
                 <div class="label">Change from Yesterday</div>
-                <div class="value" style="color: #666;"><span style="font-size: 18px;">&#x2192;</span> No change</div>
+                <div class="value" style="color: #28a745;"><span style="font-size: 18px;">&#x2193;</span> 1,764 files</div>
             </div>
         </div>
         <div class="search-box"><input type="text" id="search-input" placeholder="Search folders..."></div>
@@ -59,10 +59,10 @@
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ["2026-10-25", "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-08"],
+                    labels: ["2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-08", "2026-11-09"],
                     datasets: [{
                         label: 'Total Files',
-                        data: [23611, 23611, 21974, 21157, 18988, 16655, 18232, 18232, 15543, 12840, 12840, 12195, 12195, 10029, 10029],
+                        data: [23611, 21974, 21157, 18988, 16655, 18232, 18232, 15543, 12840, 12840, 12195, 12195, 10029, 10029, 8265],
                         borderColor: '#0061fe',
                         backgroundColor: 'rgba(0, 97, 254, 0.1)',
                         borderWidth: 2,
@@ -97,7 +97,7 @@
             });
         </script>
     <script>
-        const tableData = [{"path": "/", "file_count": 0}, {"path": "/batch 412", "file_count": 1764}, {"path": "/batch 413", "file_count": 1390}, {"path": "/batch 414", "file_count": 1083}, {"path": "/batch 415", "file_count": 1159}, {"path": "/batch 416", "file_count": 1868}, {"path": "/batch 417", "file_count": 1577}, {"path": "/batch 418", "file_count": 1188}];
+        const tableData = [{"path": "/", "file_count": 0}, {"path": "/batch 413", "file_count": 1390}, {"path": "/batch 414", "file_count": 1083}, {"path": "/batch 415", "file_count": 1159}, {"path": "/batch 416", "file_count": 1868}, {"path": "/batch 417", "file_count": 1577}, {"path": "/batch 418", "file_count": 1188}];
         const table = new Tabulator("#folder-table", {
             data: tableData, layout: "fitColumns", pagination: "local", paginationSize: 50,
             paginationSizeSelector: [25, 50, 100, 250, true],
